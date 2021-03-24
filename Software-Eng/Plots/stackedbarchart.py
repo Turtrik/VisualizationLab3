@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 # Load CSV file from Datasets folder
 df = pd.read_csv('../Datasets/Olympic2016Rio.csv')
 
-# Sorting values and select first 20 states
+# Sorting values and select first 20 countries
 new_df = df.sort_values(by=['Total'], ascending=[False]).head(20)
 
 # Preparing data
@@ -16,8 +16,8 @@ trace3 = go.Bar(x=new_df['NOC'], y=new_df['Gold'], name='Gold', marker={'color':
 data = [trace1, trace2, trace3]
 
 # Preparing layout
-layout = go.Layout(title='Total Medals of Countries in 2016 Olympics', xaxis_title="Country",
-                   yaxis_title="Total number of medals", barmode='stack')
+layout = go.Layout(title='Medals of Countries in 2016 Olympics', xaxis_title="Country",
+                   yaxis_title="Number of medals", barmode='stack')
 
 # Plot the figure and saving in a html file
 fig = go.Figure(data=data, layout=layout)

@@ -5,7 +5,7 @@ import plotly.graph_objs as go
 # Load CSV file from Datasets folder
 df = pd.read_csv('../Datasets/Olympic2016Rio.csv')
 
-# Sorting values and select first 20 states
+# Sorting values and select first 20 countries
 new_df = df.sort_values(by=['Total'], ascending=[False]).head(20)
 
 # Preparing data
